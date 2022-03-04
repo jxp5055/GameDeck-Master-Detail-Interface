@@ -1,7 +1,17 @@
-h2 {
-  font-family: Arial, Helvetica, sans-serif;
+h1, h2 {
   margin: 20px;
   color: white;
+}
+
+h1 {
+  margin: -18px;
+  margin-bottom: 20px;
+}
+
+hr {
+  background-color: white;
+  border: 1.5px solid white;
+  width: 230px;
 }
 
 .games {
@@ -26,10 +36,10 @@ button {
 }
 
 button:hover {
-  background-color: #7c98b3;
+  background-color: #e5b69d;
   color: white;
   transition: all 0.1s ease-out;
-  border: 2px solid #7c98b3;
+  border: 2px solid #e5b69d;
 }
 
 .header, .footer {
@@ -38,16 +48,16 @@ button:hover {
   margin: 0px;
   color: #aba7e5;
   font-size: 20px;
-  font-weight: bold;
 }
 
 input {
   width: 25%;
-  padding: 15px;
+  padding: 10px;
   margin: 5px 0 5px 0;
   display: inline-block;
   border: none;
   background: #f1f1f1;
+  color: #aba7e5;
 }
 
 input:focus {
@@ -59,4 +69,14 @@ input:focus {
   padding: 150px;
   background: rgb(171,167,229);
   background: linear-gradient(90deg, rgba(171,167,229,1) 0%, rgba(255,189,125,1) 100%); 
+}
+
+p {
+  font-size: 15px;
+  text-align: center;
+}
+
+.details {
+  color: white;
+  margin: 20px;
 }

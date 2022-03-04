@@ -11,6 +11,9 @@ export class GamesComponent implements OnInit {
   games = GAMES;
   selectedGame?: Game;
 
+  imageSrc = 'src/outline_games_white_48dp.png'  
+  imageAlt = 'GamePad Logo'
+
   constructor() {}
 
   ngOnInit(): void {}

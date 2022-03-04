@@ -1,5 +1,7 @@
-<div class="header">GameDeck</div>
+<div class="header"><strong>GameDeck</strong></div>
 <div class="container">
+<h1>Game Overviews:</h1>
+<hr>
 <h2>Choose a Game:</h2>
 <ul class="games">
   <li *ngFor="let game of games">
@@ -13,15 +15,17 @@
     </button>
   </li>
 </ul>
-
 <div *ngIf="selectedGame">
   <h2>{{ selectedGame.name | uppercase }} Details</h2>
-  <div><strong>ID: </strong>{{ selectedGame.id }}</div>
-  <div>
+  <div class="details"><strong>ID: </strong>{{ selectedGame.id }}</div>
+  <div class="details">
     <label for="game-name"><strong>Game name: </strong></label>
     <input id="game-name" [(ngModel)]="selectedGame.name" placeholder="name" />
   </div>
-  <div><strong>Description: </strong>{{ selectedGame.description }}</div>
+  <div class="details"><strong>Description: </strong>{{ selectedGame.description }}</div>
 </div>
 </div>
-<div class="footer"></div>
+<div class="footer">
+  <p>All content above is copyright of</p>
+    <p>PlayStation © 2021 Sony Interactive Entertainment LLC<br/>&<br/>Nintendo © 2021 Nintendo of America Inc.</p>
+</div>

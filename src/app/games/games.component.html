@@ -1,4 +1,6 @@
-<h2>Games:</h2>
+<div class="header">GameDeck</div>
+<div class="container">
+<h2>Choose a Game:</h2>
 <ul class="games">
   <li *ngFor="let game of games">
     <button
@@ -6,7 +8,7 @@
       type="button"
       (click)="onSelect(game)"
     >
-      <span class="badge">{{ game.id }}</span>
+      <span class="badge">{{ game.id }}. </span>
       <span class="name">{{ game.name }}</span>
     </button>
   </li>
@@ -14,9 +16,12 @@
 
 <div *ngIf="selectedGame">
   <h2>{{ selectedGame.name | uppercase }} Details</h2>
-  <div>id: {{ selectedGame.id }}</div>
+  <div><strong>ID: </strong>{{ selectedGame.id }}</div>
   <div>
-    <label for="game-name">Game name: </label>
+    <label for="game-name"><strong>Game name: </strong></label>
     <input id="game-name" [(ngModel)]="selectedGame.name" placeholder="name" />
   </div>
+  <div><strong>Description: </strong>{{ selectedGame.description }}</div>
 </div>
+</div>
+<div class="footer"></div>

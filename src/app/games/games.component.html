@@ -1,0 +1,22 @@
+<h2>Games:</h2>
+<ul class="games">
+  <li *ngFor="let game of games">
+    <button
+      [class.selected]="game === selectedGame"
+      type="button"
+      (click)="onSelect(game)"
+    >
+      <span class="badge">{{ game.id }}</span>
+      <span class="name">{{ game.name }}</span>
+    </button>
+  </li>
+</ul>
+
+<div *ngIf="selectedGame">
+  <h2>{{ selectedGame.name | uppercase }} Details</h2>
+  <div>id: {{ selectedGame.id }}</div>
+  <div>
+    <label for="game-name">Game name: </label>
+    <input id="game-name" [(ngModel)]="selectedGame.name" placeholder="name" />
+  </div>
+</div>
